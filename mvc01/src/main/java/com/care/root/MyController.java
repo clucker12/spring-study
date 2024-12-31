@@ -7,6 +7,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MyController {
+	public MyController() {
+		System.out.println("------my ctrl 생성자 ----------");
+	}
+	
 	@RequestMapping("/index")
 	public String test(Model model) {
 		System.out.println("----- test 연동 -------");

@@ -21,8 +21,8 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.care.root" />
-	<context:component-scan base-package="com.care.aaa" />
+	<context:component-scan base-package="com.care.member" />
+	
 	
 	
 </beans:beans>
