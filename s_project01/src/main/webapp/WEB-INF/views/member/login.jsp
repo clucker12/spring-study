@@ -15,6 +15,8 @@
  <input type="submit" value="로그인">
  <a href="${contextPath }/member/reg_form">회원가입</a>
  <br>
+ 자동로그인<input type="checkbox" name="autoLogin">
+ <br>
  </form>
 
 </body>

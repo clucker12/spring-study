@@ -18,8 +18,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 
-	@GetMapping
+	@GetMapping("/")
 	public String home() { //이 코드로 인해서 member를 입력하지 않고 index만 출력해도 된다!
+		System.out.println("ctrl index 실행");
 		return "index";
 	}	
 }

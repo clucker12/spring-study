@@ -12,4 +12,6 @@ public interface MemberMapper {
 //	public ArrayList<MemberDTO> getData(String id); 
 	public ArrayList<MemberDTO> getData(@Param("bbb") String id); 
 	public int register( MemberDTO dto );
+	public void keepLogin(@Param("sessionId") String sessionId,@Param("id") String id);
+	public MemberDTO getSessionId(String sessionId);
 }

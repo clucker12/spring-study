@@ -15,6 +15,7 @@
 	<id property="id" column="id" />
 	<result property="pwd" column="pw" />
 	<result property="addr" column="addr" />
+	<result property="sessionId" column="session_id" />
 </resultMap> <!-- 데이처베이스 에 가지고 있는 데이터랑 자바가 가지고 있는 데이터때문에 사용 -->
 <select id = "getMember" resultMap="member">
 select * from membership where id = #{id}
@@ -29,5 +30,11 @@ select * from membership
 <insert id="register">
 insert into membership(id, pw, addr) values(#{id}, #{pwd}, #{addr})<!-- membership(id, pw, addr)이거는 컬럼 명, values(#{id}, #{pwd}, #{addr}dto가 가지고 있는 변수명 -->
 </insert>
+<update id="keepLogin">
+	update membership set session_id=#{sessionId} where id = #{id}
+</update>
+<select id="getSessionId" resultMap="member">
+	select * from membership where session_id=#{sessionId}
+</select>
 
 </mapper>

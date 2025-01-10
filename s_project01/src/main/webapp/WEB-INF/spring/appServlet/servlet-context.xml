@@ -23,6 +23,21 @@
 	
 	<context:component-scan base-package="com.care.root" />
 	
+	<beans:bean id="memInt" class="com.care.root.member.interceptor.MemberInterceptor"></beans:bean>
+	<beans:bean id="autoLogin" class="com.care.root.member.interceptor.AutoLogin"></beans:bean>
+	<interceptors>
+		<interceptor>
+			<mapping path="/**"/>
+			<beans:ref bean="autoLogin"/>
+		</interceptor>
+	</interceptors>
 	
+	<interceptors>
+		<interceptor>
+			<mapping path="/member/list"/>
+			<mapping path="/member/info"/>
+			<beans:ref bean="memInt"/>
+		</interceptor>
+	</interceptors>
 	
 </beans:beans>

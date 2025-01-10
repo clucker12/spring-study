@@ -11,12 +11,12 @@
 <h1 align="center">CARE LAB</h1>
 <hr>
 <a href="${contextPath }">HOME</a> <!-- /root는 절대경로 -->
-<c:if test="${username != null }">
 <a href="${contextPath }/member/list">회원정보</a>
+<c:if test="${username != null }">
+
 <a href="${contextPath }/member/logout">로그아웃</a>
 </c:if>
 <c:if test="${username == null }">
-<a href="${contextPath }/member/login">회원정보</a>
 <a href="${contextPath }/member/login">로그인</a> <!-- 이렇게 바꾸면 변경되더라도 절대경로로 인식을하여 자동적으로 가게끔 만들어줌 -->
 
 </c:if>

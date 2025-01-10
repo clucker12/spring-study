@@ -10,6 +10,8 @@
  <%@ include file="/WEB-INF/views/default/header.jsp" %>
  id : ${member.id}<br>
  pwd : ${member.pwd}<br>
- addr : ${member.addr}<br>
+ 우편번호 : ${addr[0]}<br>
+ 주소 : ${addr[1]}<br>
+ 상세 주소 : ${addr[2]}<br>
 </body>
 </html>

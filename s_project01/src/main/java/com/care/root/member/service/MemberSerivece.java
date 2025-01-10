@@ -9,5 +9,7 @@ public interface MemberSerivece {
 	public ArrayList<MemberDTO> getList();
 	public MemberDTO getMember(String id);
 	public int register( MemberDTO dto );
+	public void keepLogin(String sessionId,String id);
+	public MemberDTO getSessionId(String sessionId);
 
 }
